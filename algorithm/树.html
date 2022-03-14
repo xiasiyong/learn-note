@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>树 | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="高级前端开发工程师进阶之路">
+    
+    <link rel="preload" href="/learn-note/assets/css/0.styles.a015446e.css" as="style"><link rel="preload" href="/learn-note/assets/js/app.42bbad7d.js" as="script"><link rel="preload" href="/learn-note/assets/js/2.fe653ee6.js" as="script"><link rel="preload" href="/learn-note/assets/js/10.84dcb440.js" as="script"><link rel="prefetch" href="/learn-note/assets/js/11.7ea89902.js"><link rel="prefetch" href="/learn-note/assets/js/12.3f79aff0.js"><link rel="prefetch" href="/learn-note/assets/js/13.505177d4.js"><link rel="prefetch" href="/learn-note/assets/js/14.cf408916.js"><link rel="prefetch" href="/learn-note/assets/js/15.5070c8a7.js"><link rel="prefetch" href="/learn-note/assets/js/16.93ea5764.js"><link rel="prefetch" href="/learn-note/assets/js/17.92529298.js"><link rel="prefetch" href="/learn-note/assets/js/18.5b466085.js"><link rel="prefetch" href="/learn-note/assets/js/19.003914aa.js"><link rel="prefetch" href="/learn-note/assets/js/20.5b0fb884.js"><link rel="prefetch" href="/learn-note/assets/js/21.77d47142.js"><link rel="prefetch" href="/learn-note/assets/js/22.41b1a14d.js"><link rel="prefetch" href="/learn-note/assets/js/23.e9e027bd.js"><link rel="prefetch" href="/learn-note/assets/js/24.1c2eb52e.js"><link rel="prefetch" href="/learn-note/assets/js/25.b902c050.js"><link rel="prefetch" href="/learn-note/assets/js/26.c38a9405.js"><link rel="prefetch" href="/learn-note/assets/js/27.2a6c326d.js"><link rel="prefetch" href="/learn-note/assets/js/28.650e9e81.js"><link rel="prefetch" href="/learn-note/assets/js/29.3063ebe6.js"><link rel="prefetch" href="/learn-note/assets/js/3.0cf10e4b.js"><link rel="prefetch" href="/learn-note/assets/js/30.da3cb9e0.js"><link rel="prefetch" href="/learn-note/assets/js/31.2eadd3f9.js"><link rel="prefetch" href="/learn-note/assets/js/32.1e89dd58.js"><link rel="prefetch" href="/learn-note/assets/js/33.f34732f1.js"><link rel="prefetch" href="/learn-note/assets/js/4.b7d0708f.js"><link rel="prefetch" href="/learn-note/assets/js/5.9e2f4ca7.js"><link rel="prefetch" href="/learn-note/assets/js/6.c7b54f12.js"><link rel="prefetch" href="/learn-note/assets/js/7.9eab58c4.js"><link rel="prefetch" href="/learn-note/assets/js/8.dcf1e932.js"><link rel="prefetch" href="/learn-note/assets/js/9.8ff24d73.js">
+    <link rel="stylesheet" href="/learn-note/assets/css/0.styles.a015446e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/learn-note/" class="home-link router-link-active"><!----> <span class="site-name">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/learn-note/react/" class="nav-link">
+  react
+</a></div><div class="nav-item"><a href="/learn-note/vue/" class="nav-link">
+  vue
+</a></div><div class="nav-item"><a href="/learn-note/nodejs/" class="nav-link">
+  nodejs
+</a></div><div class="nav-item"><a href="/learn-note/microend/" class="nav-link">
+  微前端
+</a></div><div class="nav-item"><a href="/learn-note/linux/" class="nav-link">
+  linux
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/learn-note/react/" class="nav-link">
+  react
+</a></div><div class="nav-item"><a href="/learn-note/vue/" class="nav-link">
+  vue
+</a></div><div class="nav-item"><a href="/learn-note/nodejs/" class="nav-link">
+  nodejs
+</a></div><div class="nav-item"><a href="/learn-note/microend/" class="nav-link">
+  微前端
+</a></div><div class="nav-item"><a href="/learn-note/linux/" class="nav-link">
+  linux
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/learn-note/" aria-current="page" class="sidebar-link">学习笔记</a></li><li><a href="/learn-note/react/" class="sidebar-link">react知识点</a></li><li><a href="/learn-note/vue/" class="sidebar-link">vue知识点</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="树"><a href="#树" class="header-anchor">#</a> 树</h1> <h2 id="特点"><a href="#特点" class="header-anchor">#</a> 特点</h2> <ol><li>一层分层数据的抽象模型</li></ol> <h2 id="常用操作"><a href="#常用操作" class="header-anchor">#</a> 常用操作</h2> <ol><li><p>深度/广度遍历</p> <ul><li><p>深度</p> <ul><li><p>尽可能深的搜索树的分支</p></li> <li><p>先访问根节点，再对根节点的children挨个进行深度优先遍历</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">dfs</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">root</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 先访问根节点</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 再遍历根节点的childre分别对其进行深度遍历</span>
+  root<span class="token punctuation">.</span>children<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>dfs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">dfs</span><span class="token punctuation">(</span>tree<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li></ul></li> <li><p>广度：</p> <ul><li><p>先创建一个队列，并放入root</p></li> <li><p>把对头出列，并把对头的childre挨个放入队列</p></li> <li><p>重复上一步</p></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">bfs</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">root</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 先创建一个队列，并放入root</span>
+  <span class="token keyword">const</span> q <span class="token operator">=</span> <span class="token punctuation">[</span>root<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token comment">// 把对头出列，并把对头的childre挨个放入队列</span>
+  <span class="token comment">// 重复上一步</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>q<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> h <span class="token operator">=</span> q<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>h<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    h<span class="token punctuation">.</span>children<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">child</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>child<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></li></ul></li> <li><p>先中后序遍历</p></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/learn-note/assets/js/app.42bbad7d.js" defer></script><script src="/learn-note/assets/js/2.fe653ee6.js" defer></script><script src="/learn-note/assets/js/10.84dcb440.js" defer></script>
+  </body>
+</html>
