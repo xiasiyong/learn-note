@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>用户和权限 | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="高级前端开发工程师进阶之路">
+    
+    <link rel="preload" href="/learn-note/assets/css/0.styles.a015446e.css" as="style"><link rel="preload" href="/learn-note/assets/js/app.c5297682.js" as="script"><link rel="preload" href="/learn-note/assets/js/2.923ebc4c.js" as="script"><link rel="preload" href="/learn-note/assets/js/35.3fc426c2.js" as="script"><link rel="prefetch" href="/learn-note/assets/js/10.cc2c2ceb.js"><link rel="prefetch" href="/learn-note/assets/js/11.f0324971.js"><link rel="prefetch" href="/learn-note/assets/js/12.dc10d3cb.js"><link rel="prefetch" href="/learn-note/assets/js/13.d8c503cc.js"><link rel="prefetch" href="/learn-note/assets/js/14.429c3506.js"><link rel="prefetch" href="/learn-note/assets/js/15.279cfa1a.js"><link rel="prefetch" href="/learn-note/assets/js/16.9e242dd8.js"><link rel="prefetch" href="/learn-note/assets/js/17.4600f18e.js"><link rel="prefetch" href="/learn-note/assets/js/18.3e03703e.js"><link rel="prefetch" href="/learn-note/assets/js/19.14c2ff87.js"><link rel="prefetch" href="/learn-note/assets/js/20.9e01244f.js"><link rel="prefetch" href="/learn-note/assets/js/21.f6b65b4f.js"><link rel="prefetch" href="/learn-note/assets/js/22.6536e49d.js"><link rel="prefetch" href="/learn-note/assets/js/23.04c00470.js"><link rel="prefetch" href="/learn-note/assets/js/24.e2c9a0db.js"><link rel="prefetch" href="/learn-note/assets/js/25.6812848b.js"><link rel="prefetch" href="/learn-note/assets/js/26.cd916bb8.js"><link rel="prefetch" href="/learn-note/assets/js/27.2fb5de3b.js"><link rel="prefetch" href="/learn-note/assets/js/28.afe27182.js"><link rel="prefetch" href="/learn-note/assets/js/29.e962b705.js"><link rel="prefetch" href="/learn-note/assets/js/3.603891ed.js"><link rel="prefetch" href="/learn-note/assets/js/30.ead0d726.js"><link rel="prefetch" href="/learn-note/assets/js/31.06de26f1.js"><link rel="prefetch" href="/learn-note/assets/js/32.9b976e74.js"><link rel="prefetch" href="/learn-note/assets/js/33.c53fce9b.js"><link rel="prefetch" href="/learn-note/assets/js/34.bbbb4833.js"><link rel="prefetch" href="/learn-note/assets/js/36.6803e498.js"><link rel="prefetch" href="/learn-note/assets/js/37.de038220.js"><link rel="prefetch" href="/learn-note/assets/js/38.58d8507e.js"><link rel="prefetch" href="/learn-note/assets/js/39.c673163c.js"><link rel="prefetch" href="/learn-note/assets/js/4.6adf188e.js"><link rel="prefetch" href="/learn-note/assets/js/40.b52fe856.js"><link rel="prefetch" href="/learn-note/assets/js/41.1fa7d909.js"><link rel="prefetch" href="/learn-note/assets/js/42.1cc55ce2.js"><link rel="prefetch" href="/learn-note/assets/js/43.463a8567.js"><link rel="prefetch" href="/learn-note/assets/js/44.c2e4e54a.js"><link rel="prefetch" href="/learn-note/assets/js/45.c486ea81.js"><link rel="prefetch" href="/learn-note/assets/js/46.69b5b662.js"><link rel="prefetch" href="/learn-note/assets/js/47.0c3cf9bf.js"><link rel="prefetch" href="/learn-note/assets/js/48.6d76cffd.js"><link rel="prefetch" href="/learn-note/assets/js/49.79e133dc.js"><link rel="prefetch" href="/learn-note/assets/js/5.4597eefb.js"><link rel="prefetch" href="/learn-note/assets/js/50.56e78413.js"><link rel="prefetch" href="/learn-note/assets/js/51.b952947f.js"><link rel="prefetch" href="/learn-note/assets/js/52.c5b4edf2.js"><link rel="prefetch" href="/learn-note/assets/js/53.6dd42254.js"><link rel="prefetch" href="/learn-note/assets/js/54.aa1c54c3.js"><link rel="prefetch" href="/learn-note/assets/js/55.cd02cb20.js"><link rel="prefetch" href="/learn-note/assets/js/56.177ab33e.js"><link rel="prefetch" href="/learn-note/assets/js/57.8a468e2a.js"><link rel="prefetch" href="/learn-note/assets/js/58.060b7ee2.js"><link rel="prefetch" href="/learn-note/assets/js/59.64fed891.js"><link rel="prefetch" href="/learn-note/assets/js/6.28078a48.js"><link rel="prefetch" href="/learn-note/assets/js/60.7c90f2d3.js"><link rel="prefetch" href="/learn-note/assets/js/61.901805ef.js"><link rel="prefetch" href="/learn-note/assets/js/62.e3084252.js"><link rel="prefetch" href="/learn-note/assets/js/63.9adbd0ea.js"><link rel="prefetch" href="/learn-note/assets/js/7.4cc52edf.js"><link rel="prefetch" href="/learn-note/assets/js/8.e1c148ca.js"><link rel="prefetch" href="/learn-note/assets/js/9.8a6b3fa0.js">
+    <link rel="stylesheet" href="/learn-note/assets/css/0.styles.a015446e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/learn-note/" class="home-link router-link-active"><!----> <span class="site-name">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/learn-note/react/" class="nav-link">
+  react
+</a></div><div class="nav-item"><a href="/learn-note/vue/" class="nav-link">
+  vue
+</a></div><div class="nav-item"><a href="/learn-note/nodejs/" class="nav-link">
+  nodejs
+</a></div><div class="nav-item"><a href="/learn-note/microend/" class="nav-link">
+  微前端
+</a></div><div class="nav-item"><a href="/learn-note/linux/" class="nav-link router-link-active">
+  linux
+</a></div><div class="nav-item"><a href="/learn-note/algorithm/" class="nav-link">
+  数据结构与算法
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/learn-note/react/" class="nav-link">
+  react
+</a></div><div class="nav-item"><a href="/learn-note/vue/" class="nav-link">
+  vue
+</a></div><div class="nav-item"><a href="/learn-note/nodejs/" class="nav-link">
+  nodejs
+</a></div><div class="nav-item"><a href="/learn-note/microend/" class="nav-link">
+  微前端
+</a></div><div class="nav-item"><a href="/learn-note/linux/" class="nav-link router-link-active">
+  linux
+</a></div><div class="nav-item"><a href="/learn-note/algorithm/" class="nav-link">
+  数据结构与算法
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/learn-note/linux/" class="sidebar-heading clickable router-link-active open"><span>linux</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-note/linux/1常用命令.html" class="sidebar-link">常用命令</a></li><li><a href="/learn-note/linux/2用户和权限.html" class="active sidebar-link">用户和权限</a></li><li><a href="/learn-note/linux/3进阶知识.html" class="sidebar-link">进阶知识</a></li><li><a href="/learn-note/linux/4vim编辑器.html" class="sidebar-link">vim</a></li><li><a href="/learn-note/linux/5软件安装.html" class="sidebar-link">软件安装</a></li><li><a href="/learn-note/linux/6压缩和解压文件.html" class="sidebar-link">压缩和解压</a></li><li><a href="/learn-note/linux/7链接服务器.html" class="sidebar-link">基本配置</a></li><li><a href="/learn-note/linux/9apache.html" class="sidebar-link">apache</a></li><li><a href="/learn-note/linux/11Nginx.html" class="sidebar-link">Nginx</a></li><li><a href="/learn-note/linux/12ssl证书.html" class="sidebar-link">https</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="用户和权限"><a href="#用户和权限" class="header-anchor">#</a> 用户和权限</h1> <ol><li><p>sudo： 以root身份运行命令</p></li> <li><p>sudo su : 切换到root用户</p></li> <li><p>exit ： ctrl + d 退出</p></li> <li><p>useradd:添加用户</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">useradd</span> xiasiyong
+<span class="token function">ls</span> /home // 查看用户目录
+</code></pre></div></li> <li><p>passwd：修改密码</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">passwd</span> xiasiyong
+</code></pre></div></li> <li><p>userdel: 删除用户</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">userdel</span> xiasiyong // 不会删除家目录
+<span class="token function">userdel</span> -r xiasiyong // --remove
+
+</code></pre></div></li> <li><p>l s -l : 查看目录信息</p></li> <li><p>群组</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">groupadd</span> friends // 添加群组
+<span class="token function">usermod</span> -g friends xsy
+<span class="token function">groups</span> xsy // 查看xsy属于那个群组
+<span class="token function">usermod</span> -G friends,friends1 xsy // 添加到多个群组,群组之间用,隔开，不能有空格
+<span class="token function">usermod</span> -aG friends2 xsy  // 追加
+<span class="token function">groupdel</span> friends // 删除群组
+// 只有root用户才能修改一个文件的所有者和群组
+<span class="token function">chown</span>
+<span class="token function">chgrp</span>
+<span class="token function">chown</span> -R // 递归
+</code></pre></div></li> <li><p>修改权限</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">chmod</span> // 修改权限
+d: 目录
+r：读 <span class="token number">4</span>
+w：写 <span class="token number">2</span>
+x： 运行 <span class="token number">1</span>
+l：链接
+-： 没有权限， 出现在第一位表示是文件
+.: 启动了安全标签
+重复出现？
+d rwx rw- r--
+属性： 所有者 ：群组用户：其他用户
+
+<span class="token function">chmod</span> <span class="token number">600</span> file.txt // -rw-------
+<span class="token function">chmod</span>  // 
+u -<span class="token operator">&gt;</span> user 
+g -<span class="token operator">&gt;</span> group 
+o -<span class="token operator">&gt;</span> other 
+a -<span class="token operator">&gt;</span> all 
++ -<span class="token operator">&gt;</span> <span class="token function">add</span> 
+- -<span class="token operator">&gt;</span> 删除 
+<span class="token operator">=</span> -<span class="token operator">&gt;</span> 分配
+-R -<span class="token operator">&gt;</span> 递归
+
+chomd u+rx file.txt
+
+
+</code></pre></div></li> <li><p>Nano 文本编辑器</p> <div class="language-bash extra-class"><pre class="language-bash"><code>ctrl + g:  // 帮助文档
+ctrl + x: // <span class="token builtin class-name">exit</span>
+ctrl + o: // 保存
+<span class="token function">nano</span> file.txt // 修改文件，创建文件
+-m // 激活鼠标
+-i // 激活自动缩紧
+-A // 激活智能home键功能
+
+.nanorl // 配置文件，家目录下面创建 /etc/nanorc
+
+</code></pre></div></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/learn-note/linux/1常用命令.html" class="prev">
+        常用命令
+      </a></span> <span class="next"><a href="/learn-note/linux/3进阶知识.html">
+        进阶知识
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/learn-note/assets/js/app.c5297682.js" defer></script><script src="/learn-note/assets/js/2.923ebc4c.js" defer></script><script src="/learn-note/assets/js/35.3fc426c2.js" defer></script>
+  </body>
+</html>
