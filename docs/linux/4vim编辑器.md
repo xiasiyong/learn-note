@@ -119,7 +119,7 @@
    
 6. vim 配置
    
-   ```ba
+   ```bash
       cp /etc/vimrc ~/.vimrc
       
       syntax on

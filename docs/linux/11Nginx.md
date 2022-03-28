@@ -19,7 +19,7 @@ systemctl enable nginx  // 设置开机启动
 
 ## 配置
 
-```bas
+```bash
 /etc/httpd/conf/httpd.conf // 修改appache默认80端口
 /etc/httpd/conf.d/ssl.conf // 修改appache默认443端口
 // selinux 放行端口
@@ -45,4 +45,3 @@ location / {
 
 return 301 https://$host$request_uri;
 ```
-

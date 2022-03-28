@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vim | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="高级前端开发工程师进阶之路">
+    
+    <link rel="preload" href="/learn-note/assets/css/0.styles.7b71e700.css" as="style"><link rel="preload" href="/learn-note/assets/js/app.acb95300.js" as="script"><link rel="preload" href="/learn-note/assets/js/2.86621d51.js" as="script"><link rel="preload" href="/learn-note/assets/js/37.6e541add.js" as="script"><link rel="prefetch" href="/learn-note/assets/js/10.ce01c3cc.js"><link rel="prefetch" href="/learn-note/assets/js/11.f78d5e61.js"><link rel="prefetch" href="/learn-note/assets/js/12.d215fda0.js"><link rel="prefetch" href="/learn-note/assets/js/13.d1e03607.js"><link rel="prefetch" href="/learn-note/assets/js/14.99ff2f15.js"><link rel="prefetch" href="/learn-note/assets/js/15.4041fa6d.js"><link rel="prefetch" href="/learn-note/assets/js/16.fd4969ae.js"><link rel="prefetch" href="/learn-note/assets/js/17.245a83a8.js"><link rel="prefetch" href="/learn-note/assets/js/18.04a40fc6.js"><link rel="prefetch" href="/learn-note/assets/js/19.f3b074f4.js"><link rel="prefetch" href="/learn-note/assets/js/20.178ddb9a.js"><link rel="prefetch" href="/learn-note/assets/js/21.9c5505b7.js"><link rel="prefetch" href="/learn-note/assets/js/22.121447d6.js"><link rel="prefetch" href="/learn-note/assets/js/23.ccbb240e.js"><link rel="prefetch" href="/learn-note/assets/js/24.36704798.js"><link rel="prefetch" href="/learn-note/assets/js/25.20215af3.js"><link rel="prefetch" href="/learn-note/assets/js/26.afd023b3.js"><link rel="prefetch" href="/learn-note/assets/js/27.916083bc.js"><link rel="prefetch" href="/learn-note/assets/js/28.3c6a2827.js"><link rel="prefetch" href="/learn-note/assets/js/29.94303169.js"><link rel="prefetch" href="/learn-note/assets/js/3.7738bef0.js"><link rel="prefetch" href="/learn-note/assets/js/30.3b12190d.js"><link rel="prefetch" href="/learn-note/assets/js/31.9d3da9b8.js"><link rel="prefetch" href="/learn-note/assets/js/32.1daf25de.js"><link rel="prefetch" href="/learn-note/assets/js/33.b3a26a15.js"><link rel="prefetch" href="/learn-note/assets/js/34.6a0c7a5e.js"><link rel="prefetch" href="/learn-note/assets/js/35.ecea7288.js"><link rel="prefetch" href="/learn-note/assets/js/36.02815895.js"><link rel="prefetch" href="/learn-note/assets/js/38.d294b1ae.js"><link rel="prefetch" href="/learn-note/assets/js/39.8e79c0cb.js"><link rel="prefetch" href="/learn-note/assets/js/4.135b0b60.js"><link rel="prefetch" href="/learn-note/assets/js/40.44b7a907.js"><link rel="prefetch" href="/learn-note/assets/js/41.624f9e72.js"><link rel="prefetch" href="/learn-note/assets/js/42.ce7c34d5.js"><link rel="prefetch" href="/learn-note/assets/js/43.6eaff290.js"><link rel="prefetch" href="/learn-note/assets/js/44.f767adef.js"><link rel="prefetch" href="/learn-note/assets/js/45.2c3d1bca.js"><link rel="prefetch" href="/learn-note/assets/js/46.6e5c0565.js"><link rel="prefetch" href="/learn-note/assets/js/47.2f30a1e7.js"><link rel="prefetch" href="/learn-note/assets/js/48.d6fa9695.js"><link rel="prefetch" href="/learn-note/assets/js/49.1a3e4a5d.js"><link rel="prefetch" href="/learn-note/assets/js/5.7ddeb1fe.js"><link rel="prefetch" href="/learn-note/assets/js/50.84d1331b.js"><link rel="prefetch" href="/learn-note/assets/js/51.e5c75ddb.js"><link rel="prefetch" href="/learn-note/assets/js/52.3e79655a.js"><link rel="prefetch" href="/learn-note/assets/js/53.c4634c42.js"><link rel="prefetch" href="/learn-note/assets/js/54.67fc67df.js"><link rel="prefetch" href="/learn-note/assets/js/55.76bdb181.js"><link rel="prefetch" href="/learn-note/assets/js/56.153a5ba8.js"><link rel="prefetch" href="/learn-note/assets/js/57.9528217f.js"><link rel="prefetch" href="/learn-note/assets/js/58.ffdd3dbf.js"><link rel="prefetch" href="/learn-note/assets/js/59.2d7c619b.js"><link rel="prefetch" href="/learn-note/assets/js/6.0815c6bc.js"><link rel="prefetch" href="/learn-note/assets/js/60.88426741.js"><link rel="prefetch" href="/learn-note/assets/js/61.bcd4ba8b.js"><link rel="prefetch" href="/learn-note/assets/js/62.438dc882.js"><link rel="prefetch" href="/learn-note/assets/js/63.2ad5c363.js"><link rel="prefetch" href="/learn-note/assets/js/7.daba9078.js"><link rel="prefetch" href="/learn-note/assets/js/8.713ac4e7.js"><link rel="prefetch" href="/learn-note/assets/js/9.3a814618.js">
+    <link rel="stylesheet" href="/learn-note/assets/css/0.styles.7b71e700.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/learn-note/" class="home-link router-link-active"><!----> <span class="site-name">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/learn-note/react/" class="nav-link">
+  react
+</a></div><div class="nav-item"><a href="/learn-note/vue/" class="nav-link">
+  vue
+</a></div><div class="nav-item"><a href="/learn-note/nodejs/" class="nav-link">
+  nodejs
+</a></div><div class="nav-item"><a href="/learn-note/microend/" class="nav-link">
+  微前端
+</a></div><div class="nav-item"><a href="/learn-note/linux/" class="nav-link router-link-active">
+  linux
+</a></div><div class="nav-item"><a href="/learn-note/algorithm/" class="nav-link">
+  数据结构与算法
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/learn-note/react/" class="nav-link">
+  react
+</a></div><div class="nav-item"><a href="/learn-note/vue/" class="nav-link">
+  vue
+</a></div><div class="nav-item"><a href="/learn-note/nodejs/" class="nav-link">
+  nodejs
+</a></div><div class="nav-item"><a href="/learn-note/microend/" class="nav-link">
+  微前端
+</a></div><div class="nav-item"><a href="/learn-note/linux/" class="nav-link router-link-active">
+  linux
+</a></div><div class="nav-item"><a href="/learn-note/algorithm/" class="nav-link">
+  数据结构与算法
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/learn-note/linux/" class="sidebar-heading clickable router-link-active open"><span>linux</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-note/linux/1常用命令.html" class="sidebar-link">常用命令</a></li><li><a href="/learn-note/linux/2用户和权限.html" class="sidebar-link">用户和权限</a></li><li><a href="/learn-note/linux/3进阶知识.html" class="sidebar-link">进阶知识</a></li><li><a href="/learn-note/linux/4vim编辑器.html" class="active sidebar-link">vim</a></li><li><a href="/learn-note/linux/5软件安装.html" class="sidebar-link">软件安装</a></li><li><a href="/learn-note/linux/6压缩和解压文件.html" class="sidebar-link">压缩和解压</a></li><li><a href="/learn-note/linux/7链接服务器.html" class="sidebar-link">基本配置</a></li><li><a href="/learn-note/linux/9apache.html" class="sidebar-link">apache</a></li><li><a href="/learn-note/linux/11Nginx.html" class="sidebar-link">Nginx</a></li><li><a href="/learn-note/linux/12ssl证书.html" class="sidebar-link">https</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vim"><a href="#vim" class="header-anchor">#</a> vim</h1> <ol><li><p>教程：vimtutor</p></li> <li><p>模式</p> <ol><li>交互模式
+<ol><li>不能输入文本</li> <li>可以剪切粘贴撤销</li></ol></li> <li>插入模式
+<ol><li>按 i，a(当前光标位置)，A当前光标末尾，o(光标后面新增一行), O(光标前面新增一行) 切换成插入模式</li> <li>按esc退出插入模式</li></ol></li> <li>命令模式
+<ol><li>退出，保存，配置：高亮，显示行号，发送命令</li> <li>按：进入该模式</li> <li>回车执行命令</li></ol></li> <li>可视模式
+<ol><li>v：字符可视模式</li> <li>V：行可视模式</li> <li>Ctrl + v: 块可是模式</li> <li>配合d 删除内容</li> <li></li></ol></li></ol></li> <li><p>基本操作</p> <ol><li><p>打开vim</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vim</span> file.txt // file.txt 不存在会被创建
+</code></pre></div></li></ol></li> <li><p>插入文本：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>   i: 进入插入模式
+</code></pre></div></li> <li><p>移动</p> <ol><li>h, j, k ,l 上下左右
+2. 交互模式下
+<ol><li>0: 移动到行首</li> <li>$ 移动到行尾</li> <li>w: 一个单词一个单词的移动</li></ol></li></ol></li> <li><p>保存文件</p></li> <li><p>：进入命令模式
+2. w file.txt
+3. :q , entry 退出
+4. 修改了没保存就按q, 会出现红色告警</p> <ol><li>:q！ 强制退出</li> <li>:wq 保存并退出</li> <li>:x === :wq</li></ol></li> <li><p>标准操作</p> <ol><li><p>删除</p> <ol><li><p>删除字符：交互模式：x，n+x:删除n个字符
+2. 删除行： dd：删除光标所在的行， n+dd, 删除n行</p></li> <li><p>删除单词： dw：移动到单词的首个字母，如果不在首字母，只会删除光标到下一个单词之间所有的内容， d{n}w:删除n个单词
+4. d0: 删除光标到行首的字符
+5. d$： 删除光标到行末的字符
+6. s: 删除光标所在字符并进入插入模式
+7. S： 删除光标所在的行并进入插入模式</p></li></ol></li> <li><p>复制：</p> <ol><li>yy: 复制行到内存从
+2. Yw:复制一个单词
+3. y$: 复制光标到行末的字符
+4. Y0:复制光标到行首的字符</li></ol></li> <li><p>粘贴</p> <ol><li>p
+2. n+p: 粘贴n次</li></ol></li> <li><p>替换</p> <ol><li>r：替换当前字符
+2. R： 切换替换模式</li></ol></li> <li><p>撤销</p> <ol><li>u
+2. n + u: 撤销n次</li></ol></li> <li><p>取消撤销</p> <ol><li>ctrl+r</li></ol></li> <li><p>跳转</p> <ol><li>g： 跳转到指定行（: set nu 显示行号），（: set nonu 隐藏行号）
+2. 7G, 7gg ：跳转到第7行
+3. G: 末行
+4. gg： 第一行</li></ol></li></ol></li> <li><p>高级操作</p> <ol><li>分屏
+<ol><li>sp: 横向分屏</li> <li>vsp： 垂直分屏</li> <li>Ctrl + w: 切换viewport</li> <li>合并
+<ol><li>r 文件名</li></ol></li> <li>查找
+<ol><li>/ 当前光标到文末查找</li> <li>？当前光标到文件开头查找</li> <li>下一个匹配项 n</li> <li>上一个匹配项 N</li> <li>😒/旧字符串/新字符串 查找并替换（替换光标所在行的第一个匹配到的字符串）</li> <li>😒/旧字符串/新字符串/g （替换光标所在行的所有匹配到的字符串）</li> <li>#，# 😒/旧字符串/新字符串/g （替换文件中第几行到第几行所有匹配到的字符串）</li> <li>%s/旧字符串/新字符串 （替换文件中所有匹配到的字符串）</li></ol></li> <li>运行外部命令
+<ol><li>:! + ls</li></ol></li></ol></li></ol></li> <li><p>vim 配置</p> <div class="language-bash extra-class"><pre class="language-bash"><code>   <span class="token function">cp</span> /etc/vimrc ~/.vimrc
+   
+   syntax on
+   <span class="token builtin class-name">set</span> number
+   <span class="token builtin class-name">set</span> showcmd
+   <span class="token builtin class-name">set</span> ignorecase &quot; 搜索时忽略大小写
+   <span class="token builtin class-name">set</span> <span class="token assign-left variable">mouse</span><span class="token operator">=</span>a
+</code></pre></div></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/learn-note/linux/3进阶知识.html" class="prev">
+        进阶知识
+      </a></span> <span class="next"><a href="/learn-note/linux/5软件安装.html">
+        软件安装
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/learn-note/assets/js/app.acb95300.js" defer></script><script src="/learn-note/assets/js/2.86621d51.js" defer></script><script src="/learn-note/assets/js/37.6e541add.js" defer></script>
+  </body>
+</html>

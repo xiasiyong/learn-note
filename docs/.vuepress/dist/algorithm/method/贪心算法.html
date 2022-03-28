@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>贪心算法 | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="高级前端开发工程师进阶之路">
+    
+    <link rel="preload" href="/learn-note/assets/css/0.styles.7b71e700.css" as="style"><link rel="preload" href="/learn-note/assets/js/app.acb95300.js" as="script"><link rel="preload" href="/learn-note/assets/js/2.86621d51.js" as="script"><link rel="preload" href="/learn-note/assets/js/25.20215af3.js" as="script"><link rel="prefetch" href="/learn-note/assets/js/10.ce01c3cc.js"><link rel="prefetch" href="/learn-note/assets/js/11.f78d5e61.js"><link rel="prefetch" href="/learn-note/assets/js/12.d215fda0.js"><link rel="prefetch" href="/learn-note/assets/js/13.d1e03607.js"><link rel="prefetch" href="/learn-note/assets/js/14.99ff2f15.js"><link rel="prefetch" href="/learn-note/assets/js/15.4041fa6d.js"><link rel="prefetch" href="/learn-note/assets/js/16.fd4969ae.js"><link rel="prefetch" href="/learn-note/assets/js/17.245a83a8.js"><link rel="prefetch" href="/learn-note/assets/js/18.04a40fc6.js"><link rel="prefetch" href="/learn-note/assets/js/19.f3b074f4.js"><link rel="prefetch" href="/learn-note/assets/js/20.178ddb9a.js"><link rel="prefetch" href="/learn-note/assets/js/21.9c5505b7.js"><link rel="prefetch" href="/learn-note/assets/js/22.121447d6.js"><link rel="prefetch" href="/learn-note/assets/js/23.ccbb240e.js"><link rel="prefetch" href="/learn-note/assets/js/24.36704798.js"><link rel="prefetch" href="/learn-note/assets/js/26.afd023b3.js"><link rel="prefetch" href="/learn-note/assets/js/27.916083bc.js"><link rel="prefetch" href="/learn-note/assets/js/28.3c6a2827.js"><link rel="prefetch" href="/learn-note/assets/js/29.94303169.js"><link rel="prefetch" href="/learn-note/assets/js/3.7738bef0.js"><link rel="prefetch" href="/learn-note/assets/js/30.3b12190d.js"><link rel="prefetch" href="/learn-note/assets/js/31.9d3da9b8.js"><link rel="prefetch" href="/learn-note/assets/js/32.1daf25de.js"><link rel="prefetch" href="/learn-note/assets/js/33.b3a26a15.js"><link rel="prefetch" href="/learn-note/assets/js/34.6a0c7a5e.js"><link rel="prefetch" href="/learn-note/assets/js/35.ecea7288.js"><link rel="prefetch" href="/learn-note/assets/js/36.02815895.js"><link rel="prefetch" href="/learn-note/assets/js/37.6e541add.js"><link rel="prefetch" href="/learn-note/assets/js/38.d294b1ae.js"><link rel="prefetch" href="/learn-note/assets/js/39.8e79c0cb.js"><link rel="prefetch" href="/learn-note/assets/js/4.135b0b60.js"><link rel="prefetch" href="/learn-note/assets/js/40.44b7a907.js"><link rel="prefetch" href="/learn-note/assets/js/41.624f9e72.js"><link rel="prefetch" href="/learn-note/assets/js/42.ce7c34d5.js"><link rel="prefetch" href="/learn-note/assets/js/43.6eaff290.js"><link rel="prefetch" href="/learn-note/assets/js/44.f767adef.js"><link rel="prefetch" href="/learn-note/assets/js/45.2c3d1bca.js"><link rel="prefetch" href="/learn-note/assets/js/46.6e5c0565.js"><link rel="prefetch" href="/learn-note/assets/js/47.2f30a1e7.js"><link rel="prefetch" href="/learn-note/assets/js/48.d6fa9695.js"><link rel="prefetch" href="/learn-note/assets/js/49.1a3e4a5d.js"><link rel="prefetch" href="/learn-note/assets/js/5.7ddeb1fe.js"><link rel="prefetch" href="/learn-note/assets/js/50.84d1331b.js"><link rel="prefetch" href="/learn-note/assets/js/51.e5c75ddb.js"><link rel="prefetch" href="/learn-note/assets/js/52.3e79655a.js"><link rel="prefetch" href="/learn-note/assets/js/53.c4634c42.js"><link rel="prefetch" href="/learn-note/assets/js/54.67fc67df.js"><link rel="prefetch" href="/learn-note/assets/js/55.76bdb181.js"><link rel="prefetch" href="/learn-note/assets/js/56.153a5ba8.js"><link rel="prefetch" href="/learn-note/assets/js/57.9528217f.js"><link rel="prefetch" href="/learn-note/assets/js/58.ffdd3dbf.js"><link rel="prefetch" href="/learn-note/assets/js/59.2d7c619b.js"><link rel="prefetch" href="/learn-note/assets/js/6.0815c6bc.js"><link rel="prefetch" href="/learn-note/assets/js/60.88426741.js"><link rel="prefetch" href="/learn-note/assets/js/61.bcd4ba8b.js"><link rel="prefetch" href="/learn-note/assets/js/62.438dc882.js"><link rel="prefetch" href="/learn-note/assets/js/63.2ad5c363.js"><link rel="prefetch" href="/learn-note/assets/js/7.daba9078.js"><link rel="prefetch" href="/learn-note/assets/js/8.713ac4e7.js"><link rel="prefetch" href="/learn-note/assets/js/9.3a814618.js">
+    <link rel="stylesheet" href="/learn-note/assets/css/0.styles.7b71e700.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/learn-note/" class="home-link router-link-active"><!----> <span class="site-name">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/learn-note/react/" class="nav-link">
+  react
+</a></div><div class="nav-item"><a href="/learn-note/vue/" class="nav-link">
+  vue
+</a></div><div class="nav-item"><a href="/learn-note/nodejs/" class="nav-link">
+  nodejs
+</a></div><div class="nav-item"><a href="/learn-note/microend/" class="nav-link">
+  微前端
+</a></div><div class="nav-item"><a href="/learn-note/linux/" class="nav-link">
+  linux
+</a></div><div class="nav-item"><a href="/learn-note/algorithm/" class="nav-link router-link-active">
+  数据结构与算法
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/learn-note/react/" class="nav-link">
+  react
+</a></div><div class="nav-item"><a href="/learn-note/vue/" class="nav-link">
+  vue
+</a></div><div class="nav-item"><a href="/learn-note/nodejs/" class="nav-link">
+  nodejs
+</a></div><div class="nav-item"><a href="/learn-note/microend/" class="nav-link">
+  微前端
+</a></div><div class="nav-item"><a href="/learn-note/linux/" class="nav-link">
+  linux
+</a></div><div class="nav-item"><a href="/learn-note/algorithm/" class="nav-link router-link-active">
+  数据结构与算法
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/learn-note/algorithm/dataStructure/" class="sidebar-heading clickable"><span>数据结构</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-note/algorithm/dataStructure/栈.html" class="sidebar-link">栈</a></li><li><a href="/learn-note/algorithm/dataStructure/队列.html" class="sidebar-link">队列</a></li><li><a href="/learn-note/algorithm/dataStructure/集合.html" class="sidebar-link">集合</a></li><li><a href="/learn-note/algorithm/dataStructure/链表.html" class="sidebar-link">链表</a></li><li><a href="/learn-note/algorithm/dataStructure/树.html" class="sidebar-link">树</a></li><li><a href="/learn-note/algorithm/dataStructure/字典.html" class="sidebar-link">字典</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-note/algorithm/method/" class="sidebar-heading clickable router-link-active open"><span>算法思想</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-note/algorithm/method/排序和搜索.html" class="sidebar-link">排序和搜索</a></li><li><a href="/learn-note/algorithm/method/分而治之.html" class="sidebar-link">分而治之</a></li><li><a href="/learn-note/algorithm/method/动态规划.html" class="sidebar-link">动态规划</a></li><li><a href="/learn-note/algorithm/method/贪心算法.html" class="active sidebar-link">贪心算法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn-note/algorithm/method/贪心算法.html#概念" class="sidebar-link">概念</a></li><li class="sidebar-sub-header"><a href="/learn-note/algorithm/method/贪心算法.html#场景" class="sidebar-link">场景</a></li><li class="sidebar-sub-header"><a href="/learn-note/algorithm/method/贪心算法.html#算法题" class="sidebar-link">算法题</a></li></ul></li><li><a href="/learn-note/algorithm/method/回溯算法.html" class="sidebar-link">回溯算法</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="贪心算法"><a href="#贪心算法" class="header-anchor">#</a> 贪心算法</h1> <h2 id="概念"><a href="#概念" class="header-anchor">#</a> 概念</h2> <ol><li>算法设计中的一种方法（思想）</li> <li>期盼通过每个阶段的局部最优选择，从而达到全局的最优</li> <li>结果不一定是最优的</li></ol> <h2 id="场景"><a href="#场景" class="header-anchor">#</a> 场景</h2> <ol><li><p>零钱兑换</p> <p>![image-20220327002249213](/Users/xiasiyong/Library/Application Support/typora-user-images/image-20220327002249213.png)</p></li></ol> <h2 id="算法题"><a href="#算法题" class="header-anchor">#</a> 算法题</h2> <ol><li><p>[455] 假设你是一位很棒的家长，想要给你的孩子们一些小饼干。但是，每个孩子最多只能给一块饼干。</p> <p>对每个孩子 i，都有一个胃口值 g[i]，这是能让孩子们满足胃口的饼干的最小尺寸；并且每块饼干 j，都有一个尺寸 s[j] 。如果 s[j] &gt;= g[i]，我们可以将这个饼干 j 分配给孩子 i ，这个孩子会得到满足。你的目标是尽可能满足越多数量的孩子，并输出这个最大数值。</p></li> <li><p>[122] 给定一个数组 prices ，其中 prices[i] 表示股票第 i 天的价格。</p> <p>在每一天，你可能会决定购买和/或出售股票。你在任何时候 最多 只能持有 一股 股票。你也可以购买它，然后在 同一天 出售。
+返回 你能获得的 最大 利润 。</p> <p>示例 1:</p> <p>输入: prices = [7,1,5,3,6,4]
+输出: 7
+解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。
+随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。
+示例 2:</p> <p>输入: prices = [1,2,3,4,5]
+输出: 4
+解释: 在第 1 天（股票价格 = 1）的时候买入，在第 5 天 （股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。
+注意你不能在第 1 天和第 2 天接连购买股票，之后再将它们卖出。因为这样属于同时参与了多笔交易，你必须在再次购买前出售掉之前的股票。
+示例 3:</p> <p>输入: prices = [7,6,4,3,1]
+输出: 0
+解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。</p> <p>解题思路</p> <ol><li>见好就收，见差就不动</li></ol></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/learn-note/algorithm/method/动态规划.html" class="prev">
+        动态规划
+      </a></span> <span class="next"><a href="/learn-note/algorithm/method/回溯算法.html">
+        回溯算法
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/learn-note/assets/js/app.acb95300.js" defer></script><script src="/learn-note/assets/js/2.86621d51.js" defer></script><script src="/learn-note/assets/js/25.20215af3.js" defer></script>
+  </body>
+</html>
